@@ -17,10 +17,6 @@ ADD supervisord.conf /etc/
 ADD supervisor.conf /etc/supervisord.d/
 ADD reset_admin_password_fix /opt/unity_asset_server/bin/
 
-RUN chmod +x backup
-RUN chmod +x configure
-RUN chmod +x /opt/unity_asset_server/bin/reset_admin_password_fix
-
 VOLUME ["/var/backup"]
 # Port to expose
 EXPOSE 10733
