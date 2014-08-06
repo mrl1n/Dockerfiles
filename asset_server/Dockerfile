@@ -1,9 +1,4 @@
 
-# ckerfile to run Memcached Containers
-# Based on Ubuntu Image
-############################################################
-
-# Set the base image to use to Ubuntu
 FROM tenforward/centos-i386
 
 # Set the file maintainer (your name - the file's author)
