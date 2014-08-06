@@ -1,0 +1,4 @@
+#!/bin/bash
+sleep 300
+
+/opt/unity_asset_server/bin/as_backup /var/backup/backup

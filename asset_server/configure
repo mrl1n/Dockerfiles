@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Create Admin
+if [ $PASSWORD != "" ]
+then
+	echo -e "$PASSWORD\n$PASSWORD" | /opt/unity_asset_server/bin/reset_admin_password_fix
+	/opt/unity_asset_server/bin/as_backup /var/backup/backup
+else
+	/opt/unity_asset_server/bin/as_restore /var/backup/backup
+	supervisorctl start unity-asset-server
+fi
