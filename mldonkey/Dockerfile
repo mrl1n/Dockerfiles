@@ -1,17 +1,15 @@
 
-FROM centos
+FROM phusion/baseimage 
 
 # Set the file maintainer (your name - the file's author)
 MAINTAINER Dominic Giebert <giebert@in.tum.de>
 
-RUN yum install -y python-setuptools
+RUN apt-get update
+RUN apt-get install -y python-setuptools
 RUN easy_install supervisor
 RUN mkdir /etc/supervisord.d/
-RUN yum install -y wget
-RUN wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-RUN wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
-RUN rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm
-RUN yum install -y mldonkey-server
+RUN apt-get install -y wget
+RUN apt-get install -y mldonkey-server
 
 ADD configure /
 ADD supervisord.conf /etc/

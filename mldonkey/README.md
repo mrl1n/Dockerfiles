@@ -1,7 +1,7 @@
 MLdonkey
 ===========
 
-Based on centos
+Based on the phusion baseimage
 
 Usage:
 -----------
