@@ -14,9 +14,9 @@ ADD configure /
 ADD supervisord.conf /etc/
 ADD supervisor.conf /etc/supervisord.d/
 
-VOLUME ["/var/backup"]
+VOLUME ["/.mldonkey/shared/"]
 # Port to expose
-EXPOSE 10733
+EXPOSE 10733 1412 4545
 
 # Set the CMD
 CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
