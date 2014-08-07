@@ -1,0 +1,6 @@
+echo "auth admin """
+echo passwd $PASSWORD
+echo dcn $IP $PORT
+echo save
+sleep 2
+echo exit

@@ -1,0 +1,8 @@
+export APACHE_RUN_USER="www-data"
+export APACHE_RUN_GROUP="www-data"
+export APACHE_LOG_DIR="/var/log/apache2"
+export APACHE_RUN_DIR="/etc/apache2"
+
+chown www-data:www-data /var/www/owncloud/data /var/www/owncloud/config
+
+/usr/sbin/apache2 -E /dev/stdout

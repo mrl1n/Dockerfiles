@@ -1,0 +1,37 @@
+2014/08/07 11:13:23 [cO] Started logging...
+2014/08/07 11:13:23 [dcCO] LETS reverse clients list NOW
+2014/08/07 11:13:23 [cCO] Options correctly saved
+2014/08/07 11:13:23 [dMain] Check http://www.mldonkey.org for updates
+2014/08/07 11:13:23 [dMain] enabling networks: 
+2014/08/07 11:13:23 [dMain] ---- enabling Donkey ----
+2014/08/07 11:13:23 [EDK] loading sources completed
+2014/08/07 11:13:23 [dMain] using port 16223 (client_port TCP)
+2014/08/07 11:13:23 [dMain] using port 16227 (client_port UDP)
+2014/08/07 11:13:23 [dMain] ---- enabling BitTorrent ----
+2014/08/07 11:13:23 [bTM] starting DHT on port 2701
+2014/08/07 11:13:23 [dMain] using port 6882 (client_port TCP)
+2014/08/07 11:13:23 [dMain] using port 6881 (tracker_port TCP)
+2014/08/07 11:13:23 [dMain] using port 2701 (dht_port UDP)
+2014/08/07 11:13:23 [dMain] ---- enabling FileTP ----
+2014/08/07 11:13:23 [dMain] ---- enabling interfaces ----
+2014/08/07 11:13:23 [dMain] using port 4080 (http_port)
+2014/08/07 11:13:23 [dMain] using port 4000 (telnet_port)
+2014/08/07 11:13:23 [dMain] using port 4001 (gui_port)
+2014/08/07 11:13:23 [dMain] disabled networks: Direct Connect 
+2014/08/07 11:13:23 [dMain] To command: telnet 127.0.0.1 4000
+2014/08/07 11:13:23 [dMain] Or with browser: http://127.0.0.1:4080
+2014/08/07 11:13:23 [dMain] For a GUI check out http://sancho-gui.sourceforge.net
+2014/08/07 11:13:23 [dMain] Connect to IP 127.0.0.1, port 4001
+2014/08/07 11:13:23 [dMain] If you connect from a remote machine adjust allowed_ips
+2014/08/07 11:13:23 [cCO] Options correctly saved
+2014/08/07 11:13:23 [dMain] Core started
+2014/08/07 11:13:24 [cWeb] request geoip.dat (http://www.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz)
+2014/08/07 11:13:24 [cWeb] request server.met (http://www.gruk.org/server.met.gz)
+2014/08/07 11:13:24 [cWeb] request guarding.p2p (http://www.bluetack.co.uk/config/level1.gz)
+2014/08/07 11:13:24 [cWeb] request hublist (http://dchublist.com/hublist.config.bz2)
+2014/08/07 11:13:24 [cWeb] Failure("Unknown kind [nodes.gzip]") while loading http://update.kceasy.com/update/fasttrack/nodes.gzip
+2014/08/07 11:13:25 [dMain] Received SIGINT, stopping MLDonkey...
+2014/08/07 11:13:25 [cCO] Options correctly saved
+2014/08/07 11:13:25 [cCO] Sources correctly saved
+2014/08/07 11:13:25 [cCO] Options backup as .tar.gz correctly saved
+2014/08/07 11:13:25 [dMain] Core stopped

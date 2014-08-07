@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Create Admin
+if [ $PASSWORD != "" ]
+then
+	#echo -e "$PASSWORD\n$PASSWORD" | /opt/unity_asset_server/bin/reset_admin_password_fix
+	sleep 2
+	/.mldonkey/config_telnet | telnet 127.0.0.1 4000
+else
+	sleep 1
+fi

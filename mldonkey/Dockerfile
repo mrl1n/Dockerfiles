@@ -1,16 +1,14 @@
-
 FROM debian 
 
 # Set the file maintainer (your name - the file's author)
 MAINTAINER Dominic Giebert <giebert@in.tum.de>
 
 RUN apt-get update
-RUN apt-get install -y python-setuptools
+RUN apt-get install -y python-setuptools telnet mldonkey-server
 RUN easy_install supervisor
 RUN mkdir /etc/supervisord.d/
-RUN apt-get install -y mldonkey-server
 
-ADD configure /
+ADD config /.mldonkey/
 ADD supervisord.conf /etc/
 ADD supervisor.conf /etc/supervisord.d/
 
