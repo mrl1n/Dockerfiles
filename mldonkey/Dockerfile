@@ -1,5 +1,5 @@
 
-FROM phusion/baseimage 
+FROM debian 
 
 # Set the file maintainer (your name - the file's author)
 MAINTAINER Dominic Giebert <giebert@in.tum.de>
@@ -8,7 +8,6 @@ RUN apt-get update
 RUN apt-get install -y python-setuptools
 RUN easy_install supervisor
 RUN mkdir /etc/supervisord.d/
-RUN apt-get install -y wget
 RUN apt-get install -y mldonkey-server
 
 ADD configure /

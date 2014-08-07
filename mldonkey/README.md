@@ -1,7 +1,7 @@
 MLdonkey
 ===========
 
-Based on the phusion baseimage
+Based on the debian image
 
 Usage:
 -----------
