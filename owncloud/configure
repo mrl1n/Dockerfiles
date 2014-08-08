@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# make sure owncloud folder has correct permissions
+chown -R $APACHE_RUN_USER:$APACHE_RUN_GROUP /var/www/owncloud
+
+# start apache
+supervisorctl start apache

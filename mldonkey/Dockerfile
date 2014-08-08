@@ -1,20 +1,17 @@
-FROM debian 
+FROM ubuntu:14.04 
 
 # Set the file maintainer (your name - the file's author)
 MAINTAINER Dominic Giebert <giebert@in.tum.de>
 
-RUN apt-get update
-RUN apt-get install -y python-setuptools telnet mldonkey-server
-RUN easy_install supervisor
-RUN mkdir /etc/supervisord.d/
+RUN apt-get update && apt-get install -y --force-yes --no-install-recommends supervisor telnet mldonkey-server
 
 ADD config /.mldonkey/
-ADD supervisord.conf /etc/
-ADD supervisor.conf /etc/supervisord.d/
+ADD supervisor.conf /etc/
 
 VOLUME ["/.mldonkey/shared/"]
 # Port to expose
-EXPOSE 10733 1412 4545
+EXPOSE 4444
 
 # Set the CMD
-CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
+CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor.conf"]
+

@@ -1,16 +1,10 @@
-Owncloud 7
-===========
+docker-owncloud7
+================
 
-Based on debian
+Basic Owncloud 7 Dockerfile from Debian repositories.
 
-Github: https://github.com/mrl1n/Dockerfiles
+Known Bugs:
 
-Usage:
------------
-
-Usage:
-
-```
-docker run -d -p 10733:10733 -v /var/asset_server/:/var/backup/:rw mrl1n/unity-asset-server
-```
-
+  * No persistence
+  * No restart (no supervisor)
+  * Absolutely untested
