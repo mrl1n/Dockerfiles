@@ -1,8 +1,5 @@
 FROM debian
 
-#ADD . /usr/src/app
-#WORKDIR /usr/src/app
-
 # install your application's dependencies
 RUN apt-get update \
 	&& apt-get install -y wget \
@@ -15,14 +12,16 @@ RUN apt-get update \
  	&& mkdir /etc/supervisord.d/ \
 	&& a2enmod ssl \
 	&& a2ensite default-ssl \
-	&& a2enmod rewrite
+	&& a2enmod rewrite \
+	&& apt-get autoremove \
+	&& apt-get clean \
+	&& mkdir /var/log/supervisor/
 
 ADD configure /
 ADD supervisord.conf /etc/
 ADD supervisor.conf /etc/supervisord.d/
 
-# replace this with your application's default port
-#EXPOSE 80
+EXPOSE 80
 EXPOSE 443
 
 ENV APACHE_RUN_USER  www-data
