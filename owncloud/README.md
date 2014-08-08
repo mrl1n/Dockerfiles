@@ -1,10 +1,12 @@
-docker-owncloud7
+Owncloud 7
 ================
 
 Basic Owncloud 7 Dockerfile from Debian repositories.
 
-Known Bugs:
 
-  * No persistence
-  * No restart (no supervisor)
-  * Absolutely untested
+Usage:
+-------
+
+´´´
+docker run -d -p 443:443 -p 80:80 -v /dir/:/var/www/owncloud/config -v /dir/:/var/www/owncloud/data mrl1n/owncloud7
+´´´
