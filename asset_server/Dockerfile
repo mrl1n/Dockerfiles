@@ -14,7 +14,7 @@ RUN rm unity_asset_server-2.0.1.i386.rpm
 ADD configure /
 ADD backup /
 ADD supervisord.conf /etc/
-ADD supervisor.conf /etc/supersssvisord.d/
+ADD supervisor.conf /etc/supersvisord.d/
 ADD reset_admin_password_fix /opt/unity_asset_server/bin/
 
 VOLUME ["/var/backup"]
