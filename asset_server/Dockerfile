@@ -22,5 +22,4 @@ VOLUME ["/var/backup"]
 EXPOSE 10733
 
 # Set the CMD
-
 CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
